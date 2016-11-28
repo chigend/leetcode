@@ -1,3 +1,6 @@
 .idea
 leetcode.iml
 bin
+.classpath
+.project
+
