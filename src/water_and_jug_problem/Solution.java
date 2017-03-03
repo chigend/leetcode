@@ -11,9 +11,10 @@ package water_and_jug_problem;
 public class Solution {
 
     public static void main(String [] args) {
-
+        boolean flag = canMeasureWater(0,2 ,1);
+        System.out.println(flag);
     }
-    public boolean canMeasureWater(int x, int y, int z) {
+    public static boolean canMeasureWater(int x, int y, int z) {
         if (x + y < z) {
             return false;
         }
@@ -34,7 +35,7 @@ public class Solution {
      * @param b
      * @return
      */
-    private int gcd(int a, int b) {
+    private static int gcd(int a, int b) {
         int mod = b;
         while (mod != 0) {
             int temp = b;
@@ -43,5 +44,31 @@ public class Solution {
             b = mod;
         }
         return a;
+    }
+
+    /**
+     * get the great common divisor  求最大公约数  此处使用辗转相减法
+     * 求a和b最大公约数(a，b)的步骤如下：假设a，b中大数为hight，小的数为low，用hight减去low，得high-low=d
+     * 若d≠0 则用low和d中的大数减去小数,
+     * 若d=0 则最大公约数为high或low，以此类推
+     * @param a
+     * @param b
+     * @return
+     */
+    private int gcd2(int a, int b) {
+        if( a == 0 ) {
+            return b;
+        }
+        if (b == 0) {
+            return a;
+        }
+        int low = a > b ? b:a;
+        int hight = a + b -low;
+        int difference = -1;
+        while ( (difference = hight - low) != 0) {
+            hight = difference > low ? difference:low;
+            low = difference + low - hight;
+        }
+        return hight;
     }
 }
