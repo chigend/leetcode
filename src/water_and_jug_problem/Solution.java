@@ -46,6 +46,14 @@ public class Solution {
         return a;
     }
 
+    private static int gcd3(int a, int b) {
+        int mod = a % b;
+        if (mod == 0) {
+            return b;
+        }
+        else return gcd3(b, mod);
+    }
+
     /**
      * get the great common divisor  求最大公约数  此处使用辗转相减法
      * 求a和b最大公约数(a，b)的步骤如下：假设a，b中大数为hight，小的数为low，用hight减去low，得high-low=d
