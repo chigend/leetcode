@@ -39,12 +39,13 @@ public class Solution {
             }
             if (count == 1) {
                 characterCount.remove(c);
-            }else {
+            } else {
                 characterCount.put(c, count - 1);
             }
         }
         return characterCount.size() == 0;
     }
+
     //a more effective solution for alphabets,but can't be used when input is unicode characters
     public boolean isAnagram2(String s, String t) {
         int[] alphabet = new int[26];
@@ -53,4 +54,6 @@ public class Solution {
         for (int i : alphabet) if (i != 0) return false;
         return true;
     }
+
+
 }
