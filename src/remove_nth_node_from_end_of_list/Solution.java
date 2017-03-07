@@ -22,7 +22,7 @@ public class Solution {
         l4.next = l5;
         l5.next = l6;
         l6.next = l7;
-        ListNode head = removeNthFromEnd(l,2);
+        ListNode head = removeNthFromEnd(l6,2);
         while (head != null) {
             System.out.print(head.val);
             System.out.print("->");
