@@ -8,9 +8,6 @@ import model.ListNode;
  */
 
 public class Solution {
-    private static void test(){
-        System.out.println("test");
-    }
     public static void main(String[] args) {
         ListNode l1 = new ListNode(2);
         ListNode l2= new ListNode(1);
