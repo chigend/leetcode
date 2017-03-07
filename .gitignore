@@ -3,4 +3,5 @@ leetcode.iml
 bin
 .classpath
 .project
+out/
 
