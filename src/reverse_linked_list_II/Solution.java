@@ -35,32 +35,52 @@ public class Solution {
         if (head == null) {
             return null;
         }
+        /**
+         * define a fake head which next point to the real head node
+         */
         ListNode fakeHead = new ListNode(-1);
         fakeHead.next = head;
-        int count = 1;
-        ListNode nodeBeforeReverse = fakeHead;
-        ListNode startOfReverse = null;
+        int count = 0; //define a count to record how many nodes has been iterated
+        ListNode nodeBeforeReverse = fakeHead; //define a pointer which track the node before the reverse part.
+        /**
+         * define a pointer which track the start node of reverse part,and init it with the head,
+         * in case the head is the start node of reverse part.
+         */
+        ListNode startOfReverse = head;
         ListNode present = head;
         ListNode previous = null;
-        while (count  <= n ) {
+        while (++ count  <= n ) {
             if (count < m ) {
+                /**
+                 * if haven't reached the reverse part,move the nodeBeforeReverse pointer and the startOfReverse pointer
+                 */
                 nodeBeforeReverse = present;
+                startOfReverse = nodeBeforeReverse.next;
                 present = present.next;
             }else {
-                if (count == m) {
-                    startOfReverse = present;
-                }
+                /**
+                 * when count reached  the reverse part ,just reverse it as follows
+                 */
                 ListNode temp = present.next;
                 present.next = previous;
                 previous = present;
                 present = temp;
             }
-            count ++;
         }
+        /**
+         * as the loop ends ,the previous pointer indicate the end node of reverse part,
+         * and the present pointer indicate the node after reverse part.
+         */
+        /**
+         * at last, link the reverse part with head(nodeBeforeReverse) and the tail(nodeAfterReverse)
+         */
         ListNode nodeAfterReverse = present;
         ListNode endOfReverse = previous;
         startOfReverse.next = nodeAfterReverse;
         nodeBeforeReverse.next = endOfReverse;
+        /**
+         * return the fake head's next,which is the real head node
+         */
         return fakeHead.next;
     }
 }
