@@ -1,30 +1,33 @@
 package longest_word_in_dictionary_through_deleting;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * @author yejinbiao
- * @create 2017-03-10-下午9:18
+ * @create 2017-03-10-下午10:06
  */
 
-public class Solution {
+/**
+ * a optimize solution ,since it should return the longest word,so just sort the words,
+ * and search from the longest word.
+ */
+public class Solution2 {
     public static void main(String[] args) {
         String[] words = {
-                "a", "b", "c"};
-        List<String> dictionary = Arrays.asList(words);
-        String s = "abpcplea";
-        String longestWord = findLongestWord(s, dictionary);
-        System.out.println(longestWord);
+                "ba", "ab", "a", "b"};
+        List<String> d = Arrays.asList(words);
+        String s = "bab";
+        System.out.println(findLongestWord(s,d));
+
     }
 
     public static String findLongestWord(String s, List<String> d) {
         String result = "";
-        /**
-         * in case when there are more than one possible result, it should return result
-         * according to the lexicographical order,so sort it
-         */
-        for (String word : d) {
+
+        Collections.sort(d, (a, b) -> a.length() != b.length() ? b.length() - a.length() : a.compareTo(b) );
+        out:for (String word : d) {
             /**
              *  a pointer in word,which means the current target char at which the value
              *  should be matched in s
@@ -35,13 +38,7 @@ public class Solution {
              */
             int fast = 0;
             while (true) {
-                /**
-                 * even if the word can be formed by deleting some character in s,it will
-                 * be skipped because the length is not the longest,so just judge the length
-                 */
-                if (word.length() < result.length()) {
-                    break;
-                }
+
                 /**
                  * try to find the position at which s[fast] = word[slow]
                  */
@@ -65,18 +62,8 @@ public class Solution {
                  * s.
                  */
                 if (slow == word.length()) {
-                    /**
-                     * if the current word's length is larger than result found previous,
-                     * replace the result with current word,since the program require
-                     * the longest word
-                     */
-                    if (word.length() > result.length()) {
-                        result = word;
-                    }
-                    if (word.length() == result.length() && word.compareTo(result) < 0) {
-                        result = word;
-                    }
-                    break;
+                    result = word;
+                    break out;
                 }
 
             }
