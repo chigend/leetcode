@@ -1,6 +1,9 @@
 package next_greater_element_I;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
 
 /**
  * @author yejinbiao
@@ -39,4 +42,18 @@ public class Solution {
         return nexts;
     }
 
+    public static int[] nextGreaterElement2(int[] findNums, int[] nums) {
+        Stack<Integer> stack = new Stack<>();
+        Map<Integer, Integer> table = new HashMap<>();
+        for (int num : nums) {
+            while (!stack.isEmpty() && stack.peek() < num) {
+                table.put(stack.pop(), num);
+            }
+            stack.push(num);
+        }
+        for (int i = 0;i < findNums.length; i ++) {
+            findNums[i] = table.getOrDefault(findNums[i], -1);
+        }
+        return findNums;
+    }
 }
