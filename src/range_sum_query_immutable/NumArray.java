@@ -1,4 +1,4 @@
-package range_sum_quer_immutable;
+package range_sum_query_immutable;
 
 public class NumArray {
     private int[] sums;
