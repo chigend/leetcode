@@ -1,9 +1,13 @@
 package binary_tree_inorder_traversal;
 
+import model.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import model.TreeNode;
+/**
+ * a recursion solution
+ */
 public class Solution1 {
 	public static void main(String [] args){
 		TreeNode t1 = new TreeNode(5);
