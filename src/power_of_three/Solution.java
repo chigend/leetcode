@@ -10,7 +10,6 @@ public class Solution {
 //        for (int i = 0; i < 100; i++) {
 //            System.out.println(i + ":" + isPowerOfThree(i));
 //        }
-        System.out.print(isPowerOfThree(243));
     }
 
     public static boolean isPowerOfThree(int n) {
