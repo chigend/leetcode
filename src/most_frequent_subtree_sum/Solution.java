@@ -8,8 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author yejinbiao
- * @create 2017-03-11-下午2:04
+ * a recursion solution and easy to understand
  */
 
 public class Solution {
