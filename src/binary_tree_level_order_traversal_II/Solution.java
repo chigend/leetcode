@@ -3,7 +3,6 @@ package binary_tree_level_order_traversal_II;
 import model.TreeNode;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -29,7 +28,6 @@ public class Solution {
     public static List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         traversal(root,1, result);
-        Collections.reverse(result);
         return result;
     }
     private static void traversal(TreeNode root,int level, List<List<Integer>> result) {
@@ -37,10 +35,10 @@ public class Solution {
             return;
         }
         if (level > result.size()) {
-            result.add(new ArrayList<>());
+            result.add(0,new ArrayList<>());
         }
-        result.get(level - 1).add(root.val);
         traversal(root.left,level + 1,result);
         traversal(root.right,level + 1,result);
+        result.get(result.size() - level).add(root.val);
     }
 }
