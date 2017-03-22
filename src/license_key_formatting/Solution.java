@@ -21,8 +21,12 @@ public class Solution {
             }
         }
         int mod = sb.length() % K;
-        int b = sb.length() / K;
-        int count = mod == 0 ? b - 1:b;
+        /**
+         * 如果能整除9／3  2条横杆
+         * 不能整除 8／3  2条横杆
+         * 可以通过减去1来再除
+         */
+        int count = (sb.length() - 1) / K;
         int startInsert = mod == 0 ? K : mod;
         while (count-- > 0) {
             sb.insert(startInsert, '-');
