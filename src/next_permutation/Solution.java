@@ -26,14 +26,14 @@ public class Solution {
              * part(after we have already replace the previous number with a least larger number)
              */
             if (nums[i] > nums[i - 1]) {
-                int start = nums.length - 1;
+                int leastLarger = nums.length - 1;
                 /**
                  * just scan from the end of the array to find the first the number that is
                  * larger than the previous number,replace it with the first larger number
                  * (it's the least larger number)
                  */
-                while (nums[start] <= nums[i - 1]) start--;
-                swap(nums,start,i-1);
+                while (nums[leastLarger] <= nums[i - 1]) leastLarger--;
+                swap(nums,leastLarger,i-1);
                 /**
                  * record the position after which the array should be reverse
                  */
@@ -41,7 +41,10 @@ public class Solution {
                 break;
             }
         }
-
+/**
+ * if the total array is in descending order, it means it is the largest one, so next one should
+ * be reset to a lowest order. so we reverse the whole array since low is init with 0
+ */
         while (low < high) {
             swap(nums,low,high);
             low++;
