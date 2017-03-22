@@ -37,8 +37,4 @@ public class Solution {
         return isValidBST(root.right);
     }
 
-
-
-
-    }
 }

@@ -4,4 +4,4 @@ bin
 .classpath
 .project
 out/
-
+/src/test
