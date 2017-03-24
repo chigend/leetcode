@@ -1,8 +1,7 @@
 package populating_next_right_pointers_in_each_node_II;
 
 /**
- * @author yejinbiao
- * @create 2017-03-24-下午12:07
+ *
  */
 
 public class Solution {
