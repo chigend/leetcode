@@ -9,52 +9,41 @@ import java.util.Stack;
 
 public class Solution {
     public static void main(String[] args) {
-        String s = removeKdigits("1173",2);
+        String s = removeKdigits("1432219", 3);
         System.out.println(s);
     }
 
     public static String removeKdigits(String num, int k) {
-        if (num.length() == k ) return "0";
+        if (num.length() == k) return "0";
         char[] chars = num.toCharArray();
         Stack<Character> stack = new Stack<>();
-        stack.push(chars[0]);
         int end = -1;
-        for (int i = 1; i < chars.length; i++) {
-            if (stack.isEmpty()) {
-                stack.push(chars[i]);
-                continue;
+        for (int i = 0; i < chars.length; i++) {
+            char c = chars[i];
+            while (!stack.isEmpty() && k > 0 && c < stack.peek()) {
+                stack.pop();
+                k--;
             }
-            if (chars[i] >= stack.peek()) stack.push(chars[i]);
-            else {
-                while (k > 0 && !stack.isEmpty() &&chars[i] < stack.peek()) {
-                    stack.pop();
-                    k--;
-                }
-                stack.push(chars[i]);
-                if (k == 0) {
-                    end = i;
-                    break;
-                }
-            }
-            if (i == chars.length - 1) {
-                while (k > 0)  {
-                    stack.pop();
-                    k--;
-                }
+            stack.push(c);
+            if (k == 0) {
+                end = i;
+                break;
             }
         }
+        while (k > 0) {
+            stack.pop();
+            k--;
+        }
         StringBuilder sb = new StringBuilder();
-
         while (!stack.isEmpty()) {
             sb.append(stack.remove(0));
         }
         while (end != -1 && ++end < chars.length) {
             sb.append(chars[end]);
         }
-        while (sb.length() > 0 &&sb.charAt(0) == '0') {
+        while (sb.length() > 1 && sb.charAt(0) == '0') {
             sb.deleteCharAt(0);
         }
-
-        return sb.length() == 0 ? "0" : sb.toString();
+        return sb.toString();
     }
 }
