@@ -3,8 +3,7 @@ package unique_path_II;
 
 
 /**
- * @author yejinbiao
- * @create 2017-03-29-18:52
+ * O(m*n) space
  */
 
 public class Solution {
