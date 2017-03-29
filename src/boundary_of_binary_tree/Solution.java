@@ -2,8 +2,8 @@ package boundary_of_binary_tree;
 
 import model.TreeNode;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author yejinbiao
