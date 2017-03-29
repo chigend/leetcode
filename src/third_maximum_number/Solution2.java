@@ -1,9 +1,5 @@
 package third_maximum_number;
 
-import java.util.HashSet;
-import java.util.PriorityQueue;
-import java.util.Set;
-
 /**
  * @author yejinbiao
  * @create 2017-03-26-17:30
