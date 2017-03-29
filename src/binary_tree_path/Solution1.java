@@ -1,9 +1,9 @@
 package binary_tree_path;
 
+import model.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import model.TreeNode;
 
 public class Solution1 {
 		public static void main(String [] args){
