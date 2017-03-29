@@ -1,8 +1,5 @@
 package remove_duplicates_from_sorted_array;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Solution {
 	public static void main(String[] args) {
 
