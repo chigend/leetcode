@@ -1,11 +1,5 @@
 package compare_version_numbers;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.stream.Stream;
-
 /**
  * 2016/11/23
  */
