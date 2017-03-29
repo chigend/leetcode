@@ -1,6 +1,5 @@
 package find_k_pairs_with_smallest_sums;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
