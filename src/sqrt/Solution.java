@@ -1,7 +1,5 @@
 package sqrt;
 
-import java.util.Arrays;
-
 /**
  * 2016/11/23
  */
