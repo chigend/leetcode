@@ -1,7 +1,5 @@
 package odd_even_linked_list;
 
-import java.awt.Event;
-
 import model.ListNode;
 
 public class Solution {
