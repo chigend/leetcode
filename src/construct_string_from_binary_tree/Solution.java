@@ -30,7 +30,7 @@ public class Solution {
     private static void convert(TreeNode root,StringBuilder sb) {
         if (root == null) return;
         sb.append(root.val);
-        //if it;s a leaf node,there is no need to display it's empty childs
+        //if it's a leaf node,there is no need to display it's empty childs
         if (root.left == null && root.right == null)return;
         sb.append('(');
         convert(root.left,sb);
