@@ -41,7 +41,6 @@ public class Solution {
             convert(root.right,sb);
             sb.append(')');
         }
-
     }
 
 }
