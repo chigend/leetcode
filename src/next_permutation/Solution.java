@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] nums = {5,1,1};
+        int[] nums = {1,2,1};
         nextPermutation(nums);
         System.out.print(Arrays.toString(nums));
     }
