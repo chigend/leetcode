@@ -1,7 +1,5 @@
 package longest_increasing_subsequence;
 
-import java.util.Arrays;
-
 /**
  * @author yejinbiao
  * @create 2017-06-29-10:10
@@ -9,7 +7,7 @@ import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] nums = {10,22,9,33,21,50,41,60,80};
+        int[] nums = {10,9,2,5,3,7,101,18};
         int longest = lengthOfLIS(nums);
         System.out.println(longest);
 
@@ -19,21 +17,19 @@ public class Solution {
         if (nums.length == 0) {
             return 0;
         }
-        int max = 1;
+        int maxLen = 1;
         int[] dp = new int[nums.length];
-        Arrays.fill(dp,1);
+        dp[0] = 1;
         for (int i = 0; i < nums.length; i++) {
-            int previous = 0;
-            int currentMax = 1;
+            int max = 1;
             for (int j = 0; j < i; j++) {
                 if (nums[i] > nums[j]) {
-                    previous = dp[j] + 1;
+                    max = dp[j] + 1;
                 }
-                currentMax = Math.max(currentMax,previous);
+                dp[i] = Math.max(dp[i],max);
             }
-            dp[i] = currentMax;
-            max = Math.max(max,dp[i]);
+            maxLen = Math.max(maxLen,dp[i]);
         }
-        return max;
+        return maxLen;
     }
 }
