@@ -1,8 +1,7 @@
 package friend_cycles;
 
 /**
- * @author yejinbiao
- * @create 2017-07-18-14:01
+ * union find solution
  */
 
 public class Solution {
