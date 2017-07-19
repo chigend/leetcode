@@ -1,8 +1,7 @@
 package number_of_islands;
 
 /**
- * @author yejinbiao
- * @create 2017-07-19-9:56
+ * union find solution
  */
 
 public class Solution {

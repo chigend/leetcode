@@ -1,8 +1,7 @@
 package number_of_islands;
 
 /**
- * @author yejinbiao
- * @create 2017-07-19-12:58
+ * dfs solution
  */
 
 public class Solution2 {
