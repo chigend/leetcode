@@ -6,3 +6,10 @@ bin
 out/
 /src/test
 *.log
+
+
+#problem not solved
+src/surrounded_regions
+src/word_search_II
+src/decode_ways
+
