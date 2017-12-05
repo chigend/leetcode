@@ -1,8 +1,8 @@
 package kth_smallest_element_in_a_bst;
 
-import model.TreeNode;
-
 import java.util.Stack;
+
+import model.TreeNode;
 
 /**
  *  iterative solution

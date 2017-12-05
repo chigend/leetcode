@@ -1,9 +1,9 @@
 package binary_tree_level_order_traversal;
 
-import model.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import model.TreeNode;
 //普通遍历
 public class Solution1 {
 	public static void main(String [] args){

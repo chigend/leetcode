@@ -1,6 +1,5 @@
 package recover_binary_search_tree;
 
-import model.ListNode;
 import model.TreeNode;
 
 /**

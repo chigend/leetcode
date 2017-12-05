@@ -1,8 +1,8 @@
 package linked_list_random_node;
 
-import model.ListNode;
-
 import java.util.Random;
+
+import model.ListNode;
 
 /**
  * @author yejinbiao

@@ -1,8 +1,8 @@
 package convert_bst_to_greater_tree;
 
-import model.TreeNode;
-
 import java.util.Stack;
+
+import model.TreeNode;
 
 /**
  * @author yejinbiao

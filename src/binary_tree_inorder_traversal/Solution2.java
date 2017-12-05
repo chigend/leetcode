@@ -1,10 +1,10 @@
 package binary_tree_inorder_traversal;
 
-import model.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+
+import model.TreeNode;
 
 /**
  * a loop solution without recursion

@@ -1,6 +1,5 @@
 package image_smoother;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Solution {

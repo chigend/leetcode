@@ -1,9 +1,5 @@
 package set_matrix_zeroes;
 
-import jdk.nashorn.internal.runtime.FindProperty;
-
-import java.util.Arrays;
-
 /**
  * O(m+n)space solution
  */

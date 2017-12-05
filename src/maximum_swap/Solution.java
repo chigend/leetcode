@@ -1,7 +1,5 @@
 package maximum_swap;
 
-import java.util.Arrays;
-
 public class Solution {
     public static void main(String[] args) {
         int swap = maximumSwap(115);

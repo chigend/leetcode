@@ -1,7 +1,5 @@
 package design_twitter;
 
-import java.time.temporal.Temporal;
-
 /**
  * @author yejinbiao
  * @create 2017-06-27-17:33

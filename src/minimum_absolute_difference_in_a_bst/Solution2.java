@@ -1,8 +1,8 @@
 package minimum_absolute_difference_in_a_bst;
 
-import model.TreeNode;
-
 import java.util.Stack;
+
+import model.TreeNode;
 
 /**
  * @author yejinbiao

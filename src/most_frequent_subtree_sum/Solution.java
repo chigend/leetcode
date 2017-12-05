@@ -1,11 +1,11 @@
 package most_frequent_subtree_sum;
 
-import model.TreeNode;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import model.TreeNode;
 
 /**
  * a recursion solution and easy to understand

@@ -1,9 +1,9 @@
 package binary_tree_level_order_traversal_II;
 
-import model.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import model.TreeNode;
 
 /**
  * @author yejinbiao

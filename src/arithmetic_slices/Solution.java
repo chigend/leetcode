@@ -1,8 +1,5 @@
 package arithmetic_slices;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author yejinbiao
  * @create 2017-03-30-17:07

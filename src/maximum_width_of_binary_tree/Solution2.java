@@ -2,8 +2,6 @@ package maximum_width_of_binary_tree;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 
 import model.TreeNode;
 

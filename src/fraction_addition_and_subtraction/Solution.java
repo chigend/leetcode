@@ -1,7 +1,5 @@
 package fraction_addition_and_subtraction;
 
-import java.util.Arrays;
-
 public class Solution {
     public static void main(String[] args) {
         String res = fractionAddition("1/3-1/2");

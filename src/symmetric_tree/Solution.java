@@ -1,9 +1,9 @@
 package symmetric_tree;
 
-import model.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import model.TreeNode;
 
 /**
  * a iterative solution without recursion

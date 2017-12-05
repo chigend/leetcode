@@ -1,7 +1,6 @@
 package insert_interval;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import model.Interval;

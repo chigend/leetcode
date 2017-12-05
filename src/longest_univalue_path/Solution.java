@@ -1,7 +1,5 @@
 package longest_univalue_path;
 
-import java.util.Map;
-
 import model.TreeNode;
 
 public class Solution {

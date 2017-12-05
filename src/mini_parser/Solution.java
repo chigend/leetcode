@@ -1,10 +1,7 @@
 package mini_parser;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-
-import flatten_nested_list_iterator.NestedInteger;
 
 public class Solution {
     public static void main(String[] args) {

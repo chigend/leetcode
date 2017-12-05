@@ -1,8 +1,6 @@
 package peeking_iterator;
 
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 
 public class PeekingIterator implements Iterator<Integer> {
     private Integer next;

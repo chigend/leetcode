@@ -1,8 +1,11 @@
 package binary_tree_zigzag_level_order_traversal;
 
-import model.TreeNode;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
-import java.util.*;
+import model.TreeNode;
 
 /**
  * @author yejinbiao

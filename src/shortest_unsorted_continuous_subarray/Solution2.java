@@ -1,7 +1,5 @@
 package shortest_unsorted_continuous_subarray;
 
-import java.util.Arrays;
-
 public class Solution2 {
     public static void main(String[] args) {
 

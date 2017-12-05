@@ -1,9 +1,9 @@
 package construct_binary_tree_from_inorder_and_postorder_traversal;
 
-import model.TreeNode;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import model.TreeNode;
 
 /**
  * @author yejinbiao

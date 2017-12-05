@@ -1,8 +1,8 @@
 package validate_binary_search_tree;
 
-import model.TreeNode;
-
 import java.util.Stack;
+
+import model.TreeNode;
 
 /**
  * iterative solution

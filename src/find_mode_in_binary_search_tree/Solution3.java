@@ -1,8 +1,8 @@
 package find_mode_in_binary_search_tree;
 
-import model.TreeNode;
-
 import java.util.Arrays;
+
+import model.TreeNode;
 
 /**
  * O(1) space with two pass solution

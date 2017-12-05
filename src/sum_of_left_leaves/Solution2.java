@@ -1,8 +1,8 @@
 package sum_of_left_leaves;
 
-import model.TreeNode;
-
 import java.util.Stack;
+
+import model.TreeNode;
 
 /**
  * a loop solution without recursion

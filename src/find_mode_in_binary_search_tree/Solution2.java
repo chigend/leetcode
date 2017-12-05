@@ -1,10 +1,10 @@
 package find_mode_in_binary_search_tree;
 
-import model.TreeNode;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import model.TreeNode;
 
 /**
  *

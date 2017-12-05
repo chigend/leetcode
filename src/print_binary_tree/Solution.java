@@ -3,8 +3,6 @@ package print_binary_tree;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.org.apache.xpath.internal.WhitespaceStrippingElementMatcher;
-
 import model.TreeNode;
 
 public class Solution {

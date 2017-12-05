@@ -1,9 +1,9 @@
 package binary_tree_right_side_view;
 
-import model.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import model.TreeNode;
 
 /**
  * @author yejinbiao

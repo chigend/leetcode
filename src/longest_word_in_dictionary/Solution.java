@@ -1,7 +1,5 @@
 package longest_word_in_dictionary;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
-
 public class Solution {
     public static void main(String[] args) {
         String[] words = {"a", "banana", "app", "appl", "ap", "apply", "applz"};

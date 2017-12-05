@@ -1,7 +1,5 @@
 package non_decreasing_array;
 
-import java.util.Stack;
-
 public class Solution {
     public static void main(String[] args) {
         boolean possiable = checkPossibility(new int[]{2,3,3,2,4});

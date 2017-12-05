@@ -1,7 +1,5 @@
 package maximum_binary_tree;
 
-import java.util.Map;
-
 import model.TreeNode;
 
 public class Solution {

@@ -1,7 +1,5 @@
 package longest_continuous_increasing_subsequence;
 
-import java.util.Map;
-
 public class Solution {
     public static void main(String[] args) {
         int max = findLengthOfLCIS(new int[]{1,3,5,4,7});

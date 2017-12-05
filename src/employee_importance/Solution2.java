@@ -1,10 +1,8 @@
 package employee_importance;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class Solution2 {
     public int getImportance(List<Employee> employees, int id) {

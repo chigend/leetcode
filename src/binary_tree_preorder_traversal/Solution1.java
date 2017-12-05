@@ -1,9 +1,9 @@
 package binary_tree_preorder_traversal;
 
-import model.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import model.TreeNode;
 
 /**
  * a recursion solution

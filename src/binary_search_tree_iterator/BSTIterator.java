@@ -1,8 +1,5 @@
 package binary_search_tree_iterator;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Stack;
 
 import model.TreeNode;
