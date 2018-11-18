@@ -13,10 +13,12 @@ public class Solution {
 
         ListNode node1 = new ListNode(3);
         ListNode node2 = new ListNode(2);
-//        node2.next = node;
-                node.next = node1;
-                node1.next = node2;
-        ListNode result = insertionSortList(node);
+        //        node2.next = node;
+        node.next = node1;
+        node1.next = node2;
+        Solution solution = new Solution();
+
+        ListNode result = solution.insertionSortList2(node);
 
         while (result != null) {
             System.out.print(result.val + "->");
@@ -24,41 +26,18 @@ public class Solution {
         }
     }
 
-    public static ListNode insertionSortList(ListNode head) {
-        ListNode next = head;
-        ListNode present = head;
-        ListNode last = null;
-        while (next != null) {
-            next = present.next;
-            if (last == null || present.val >= last.val) {
-                present.next = last;
-                last = present;
-            } else {
-                ListNode previous = last;
-                ListNode temp = last.next;
-                while (temp != null && temp.val > present.val) {
-                    temp = temp.next;
-                    previous = previous.next;
-                }
-                previous.next = present;
-                present.next = temp;
+    public ListNode insertionSortList2(ListNode head) {
+        ListNode fake = new ListNode(-1);
+        while (head != null) {
+            ListNode next = head.next;
+            ListNode node = fake;
+            while (node.next != null && node.next.val <= head.val) {
+                node = node.next;
             }
-
-            present = next;
+            head.next = node.next;
+            node.next = head;
+            head = next;
         }
-        return reverseList(last);
-    }
-
-    private static ListNode reverseList(ListNode tail) {
-        ListNode next = tail;
-        ListNode previous = null;
-        while (next != null) {
-            ListNode node = next;
-            next = next.next;
-            node.next = previous;
-            previous = node;
-
-        }
-        return previous;
+        return fake.next;
     }
 }
