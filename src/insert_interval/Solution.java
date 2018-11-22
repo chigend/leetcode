@@ -12,27 +12,22 @@ public class Solution {
         System.out.println(insert(list, new Interval(6, 7)));
     }
 
-    public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
+    public static List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         List<Interval> result = new ArrayList<>();
-
-        int left = 0;
-        for(int i = 0; i < intervals.size(); i++, left++) {
+        for(int i = 0; i < intervals.size(); i++) {
             Interval cur = intervals.get(i);
-            if (newInterval.start > cur.end) {
+            if (newInterval == null || newInterval.start > cur.end) {
                 result.add(cur);
             }else if(newInterval.end < cur.start) {
                 result.add(newInterval);
+                result.add(cur);
                 newInterval = null;
-                break;
             }else{
                 newInterval.start = Math.min(cur.start, newInterval.start);
                 newInterval.end = Math.max(cur.end, newInterval.end);
             }
         }
 
-        for(int i = left; i < intervals.size(); i++) {
-            result.add(intervals.get(i));
-        }
         if (newInterval != null) {
             result.add(newInterval);
         }
