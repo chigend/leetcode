@@ -1,26 +1,30 @@
 package largest_number;
 
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import java.util.Arrays;
 
 /**
  * 2016/11/25
  */
 public class Solution {
     public static void main(String[] args) {
-        for (int i = 0; i < 32; i++) {
-            System.out.println(Integer.toBinaryString(1 << i));
-
-        }
+        Solution solution = new Solution();
+        String largestNum = solution.largestNumber(new int[]{0,0,0});
+        System.out.println(largestNum);
     }
 
-    public static String largestNumber(int[] num) {
-        String result = IntStream.of(num)
-                .mapToObj(Integer::toString)
-                .sorted((s1, s2) -> (s2 + s1).compareTo(s1 + s2))
-                .collect(Collectors.joining(""));
-        //"00"应该返回"0"
-        return result.charAt(0) == '0' ? "0" : result;
-
+    public  String largestNumber(int[] num) {
+        String[] numStr = new String[num.length];
+        for (int i = 0; i < num.length; i++) {
+            numStr[i] = String.valueOf(num[i]);
+        }
+        Arrays.sort(numStr, (a, b) -> (b + a).compareTo(a + b));
+        if ("0".equals(numStr[0])) {
+            return "0";
+        }
+        String result = "";
+        for (String str : numStr) {
+            result += str;
+        }
+        return result;
     }
 }
