@@ -7,8 +7,8 @@ package longest_increasing_subsequence;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] nums = {10,9,2,5,3,7,101,18};
-        int longest = lengthOfLIS(nums);
+        int[] nums = {1,3,6,7,9,4,10,5,6};
+        int longest = lengthOfLIS2(nums);
         System.out.println(longest);
 
     }
@@ -31,5 +31,21 @@ public class Solution {
             maxLen = Math.max(maxLen,dp[i]);
         }
         return maxLen;
+    }
+
+    public static int lengthOfLIS2(int[] nums) {
+        int[] dp = new int[nums.length + 1];
+        int result = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int max = 1;
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j]) {
+                    max = Math.max(dp[j + 1] + 1, max);
+                }
+            }
+            dp[i + 1] = max;
+            result = Math.max(result, max);
+        }
+        return dp[nums.length];
     }
 }
