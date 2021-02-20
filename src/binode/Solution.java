@@ -16,7 +16,6 @@ public class Solution {
     public static TreeNode convertBiNode(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode fake = new TreeNode(-1);
-        fake.right = root;
         TreeNode previous = fake;
         while (root != null || !stack.isEmpty()) {
             while (root != null) {
