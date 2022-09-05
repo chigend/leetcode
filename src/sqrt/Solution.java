@@ -5,31 +5,27 @@ package sqrt;
  */
 public class Solution {
     public static void main(String[] args) {
-        int result = mySqrt(3);
+        Solution solution = new Solution();
+        int result = mySqrt(2147483647);
         System.out.println(result);
 
-    } public static int mySqrt(int x) {
-        if(x==0){
+    }
+
+    public static int mySqrt(int x) {
+        if(x == 0) {
             return 0;
         }
-        int low = 1;
-        int high = x;
-        while (low<high){
-            int mid = (low+high)>>1;
-            int result = x/mid;
-
-            if(result > mid){
-                low = mid;
-            }else if(result < mid){
-                high = mid;
-            }else {
-                return mid;
-            }
-            if(high - low ==1){
-                break;
+        int l = 1;
+        int r = x;
+        while (l < r) {
+            int mid = r + (l - r >> 1);
+            if (x / mid <= mid) {
+                r = mid;
+            } else {
+                l = mid + 1;
             }
         }
-        return low;
+        return x / r < r ? r - 1 : r;
     }
 
 }
