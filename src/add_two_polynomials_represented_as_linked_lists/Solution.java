@@ -1,36 +1,29 @@
 package add_two_polynomials_represented_as_linked_lists;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
 import model.PolyNode;
-import tool.PolyNodePrinter;
-import tool.PolyNodeTestCaseTransformer;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        PolyNode poly1 = PolyNodeTestCaseTransformer.transform("[[1,0]]");
-        PolyNode poly2 = PolyNodeTestCaseTransformer.transform("[[1,1]]");
-        PolyNode polyNode = addPoly(poly1, poly2);
-        PolyNodePrinter.print(polyNode);
-    }
-    public static PolyNode constructPolyNodeFromFile(String fileName) {
-        StringBuilder sb = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("/Users/yejinbiao/downloads/".concat(fileName)))) {
-            String line = null;
-            while ((line = br.readLine()) != null) {
-                sb.append(line);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return PolyNodeTestCaseTransformer.transform(sb.toString());
-    }
+//    public static void main(String[] args) {
+//        PolyNode poly1 = PolyNodeTestCaseTransformer.transform("[[1,0]]");
+//        PolyNode poly2 = PolyNodeTestCaseTransformer.transform("[[1,1]]");
+//        PolyNode polyNode = addPoly(poly1, poly2);
+//        PolyNodePrinter.print(polyNode);
+//    }
+//    public static PolyNode constructPolyNodeFromFile(String fileName) {
+//        StringBuilder sb = new StringBuilder();
+//        try (BufferedReader br = new BufferedReader(new FileReader("/Users/yejinbiao/downloads/".concat(fileName)))) {
+//            String line = null;
+//            while ((line = br.readLine()) != null) {
+//                sb.append(line);
+//            }
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return PolyNodeTestCaseTransformer.transform(sb.toString());
+//    }
 
 
 
