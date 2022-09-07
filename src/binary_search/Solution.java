@@ -7,17 +7,16 @@ public class Solution {
         System.out.println(solution.search(nums, 5));
     }
     public int search(int[] nums, int target) {
-        int low = 0, high = nums.length - 1;
-        while (low <= high) {
-            int med = (low + high) >> 1;
-            if (nums[med] == target) {
-                return med;
-            }else if (nums[med] > target) {
-                high = med - 1;
-            }else {
-                low = med + 1;
+        int l = 0;
+        int r = nums.length - 1;
+        while(l < r) {
+            int mid = l + r >> 1;
+            if(nums[mid] >= target) {
+                r = mid;
+            }else{
+                l = mid + 1;
             }
         }
-        return -1;
+        return nums[r] == target ? r : -1;
     }
 }
